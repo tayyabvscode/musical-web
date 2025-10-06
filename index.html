@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href="style.css" rel="stylesheet" />
+    <title>Tayyab's Company</title>
+  </head>
+
+  <body class="centered">
+    <div class="Image">
+      <figure>
+        <header>
+          <img src="images/logo.jpg" width="100" length="100" alt="logo" />
+        </header>
+
+        <h1>Tayyab's Music</h1>
+        <hr />
+      </figure>
+    </div>
+    <img src="images/thumb.png" width="1800" length="1800" alt="picture" />
+    <hr />
+    <hr />
+    <table>
+      <tr>
+        <td><img src="images/pakisan.jpeg" alt="Image" width="500px" /></td>
+        <td><img src="images/lal.jpeg" alt="image" width="500px" /></td>
+        <td><img src="images/qatalth.jpeg" alt="Image" width="500px" /></td>
+      </tr>
+    </table>
+    <table>
+      <tr>
+        <td>
+          <a href="index.html"
+            ><button>
+              <h1>HOME</h1>
+            </button></a
+          >
+        </td>
+        <td>
+          <a href="artists.html" target="_blank"
+            ><button>
+              <h1>ARTISTS</h1>
+            </button></a
+          >
+        </td>
+        <td>
+          <a href="latest.html" target="_blank"
+            ><button>
+              <h1>SONGS</h1>
+            </button></a
+          >
+        </td>
+        <td>
+          <a href="old.html" target="_blank"
+            ><button>
+              <h1>OLD SONGS</h1>
+            </button></a
+          >
+        </td>
+        <td>
+          <a href="nusrat.html" target="_blank"
+            ><button>
+              <h1>NUSRAT QAWALI</h1>
+            </button></a
+          >
+        </td>
+      </tr>
+    </table>
+    <input type="text" id="searchBar" placeholder="Search for a song..." />
+    <div id="songs"></div>
+    <script>
+      const playlist = [
+        {
+          name: "aj ki rat song",
+          filePath: "videos/aj ki rat.mp4",
+          poster: "images/aj ki rat.jpeg",
+        },
+        {
+          name: "azul song",
+          filePath: "videos/azul.mp4",
+          poster: "images/azul.jpg",
+        },
+        {
+          title: "LOCK SIDHU SONG",
+          src: "videos/lock.mp4",
+          poster: "images/lock.jpeg",
+        },
+        {
+          title: "REGRET SIDHU SONG",
+          src: "videos/regret.mp4",
+          poster: "images/regret.jpeg",
+        },
+        {
+          title: "INVICLIBLE sidhu song",
+          src: "videos/incinble.mp4",
+          poster: "images/invincible.jpeg",
+        },
+        {
+          title: "SIN SIDHU SONG",
+          src: "videos/sin.mp4",
+          poster: "images/sin.jpeg",
+        },
+        {
+          title: "BADFELLA SIDHU SONG",
+          src: "videos/badfella.mp4",
+          poster: "images/badfella.jpeg",
+        },
+        {
+          title: "STEFLON SIDHU SONG",
+          src: "videos/Stefflon.mp4",
+          poster: "images/steflon.jpeg",
+        },
+        {
+          title: "TREND SIDHU SONG",
+          src: "videos/trend.mp4",
+          poster: "images/trednd.jpeg",
+        },
+        {
+          title: "I AM BETTER NOW SIDHU SONG",
+          src: "videos/imbetter.mp4",
+          poster: "images/imbetter.jpeg",
+        },
+        {
+          title: "HATHLER SIDHU SONG",
+          src: "videos/hathler.mp4",
+          poster: "images/hathler.jpeg",
+        },
+        {
+          name: "BROWN RANG YO YO HONEY SINGH SONG",
+          filePath:
+            "videos/BROWN-RANG-YO-YO-HONEY-SINGH-OFFICIAL-MUSIC-VIDEO_1080.mp4",
+          poster: "images/brown rang.jpeg",
+        },
+        {
+          name: "LAL PARI YO YO HONEY SINGH SONG",
+          filePath:
+            "videos/LAAL-PARI-Song-Yo-Yo-Honey-Singh-Sajid-Nadiadwala_1080.mp4",
+          poster: "images/lal pari.jpg",
+        },
+        {
+          name: "LOVE DOSE YO YO HONEY SINGH SONG",
+          filePath: "videos/LOVE-DOSE-Full-Video-Song-Yo-Yo-Honey_1080.mp4",
+          poster: "images/love dose.jpeg",
+        },
+        {
+          name: "MANIAC YO YO HONEY SINGH SONG",
+          filePath: "videos/MANIAC-Official-Video-YO-YO-HONEY-SINGH-mp4",
+          poster: "images/maniac.jpeg",
+        },
+        {
+          name: "BLUE EYES YO YO HONEY SINGH SONG",
+          filePath:
+            "videos/Blue-Eyes-Full-Video-Song-Yo-Yo-Honey-Singh_1080.mp4",
+          poster: "images/blue eyes.jpeg",
+        },
+        {
+          name: "MILLIONARE YO YO HONEY SINGH SONG",
+          filePath:
+            "videos/MILLIONAIRE-SONG-Full-Video-YoYoHoneySingh-GLORY-BHUSHAN-KUMAR_1080.mp4",
+          poster: "images/millionare.jpeg",
+        },
+        {
+          name: "JATT MEHAKMA YO YO HONEY SINGH SONG",
+          filePath:
+            "videos/ jatt MEHKMA-SONG-Full-Video-YO-YO-HONEY-SINGH_1080.mp4",
+          poster: "images/jatt mehakma.jpeg",
+        },
+        {
+          name: "DESI KALAKAR YO YO HONEY SINGH SONG",
+          filePath:
+            "videos/Desi-Kalakaar-Full-VIDEO-Song-Yo-Yo-Honey_1080 (1).mp4",
+          poster: "images/desi kalakar.jpeg",
+        },
+        {
+          name: "SHOPPING LIST YO YO HONEY SINGH SONG",
+          filePath: "videos/shopping list.mp4",
+          poster: "images/shopping list.jpeg",
+        },
+        {
+          name: "ONE BOTTLE DOWN HONEY SINGH SONG",
+          filePath:
+            "videos/One-Bottle-Down-Full-Song-with-LYRICS-Yo-Yo_1080.mp4",
+          poster: "images/one bottle down.jpeg",
+        },
+        {
+          title: "EAST SIDE FLOW SIDHU SONG",
+          src: "videos/east side flow.mp4",
+          poster: "images/east side flow.jpeg",
+        },
+        {
+          title: "DOLLAR SIDHU SONG",
+          src: "videos/dollar.mp4",
+          poster: "images/dollar.jpeg",
+        },
+        {
+          title: "BROWN SHORTIE SIDHU SONG",
+          src: "videos/brown shortie.mp4",
+          poster: "images/brown shortie.jpeg",
+        },
+        {
+          title: "WO BHI APNY NA HOWY NFAK",
+          src: "videos/Wo-bhi-apny-na-howy-dil-bhi-gya-hathon-se_360.mp4",
+          poster: "images/nusrat 1.jpeg",
+        },
+        {
+          title: "BINA MAHI NFAK",
+          src: "videos/Bina-Maahi-Nusrat-Fateh-Ali-Khan-Ft-A1-MelodyMaster_360.mp4",
+          poster: "images/nusrat 2",
+        },
+        {
+          title: "KIWEN MUHRE NFAK",
+          src: "videos/kiwen muhre.mp4",
+          poster: "images/nusrat 3.jpeg",
+        },
+        {
+          title: "MAST NAZOON SE ALLAH BACHAYE NFAK",
+          src: "videos/mast nazroon.mp4",
+          poster: "images/nusrat 4.jpeg",
+        },
+        {
+          title: "DIL PE ZAKHAM KHATE HIAN NFAK",
+          src: "videos/Dil Pe Zakham Khate Hain - Trap Mix - Nusrat Fateh Ali Khan remix 🖤 - Remixed by Afternight Vibes.mp4",
+          poster: "images/nusrat 5.jpeg",
+        },
+        {
+          title: "SANSON KI MALA PY NFAK",
+          src: "videos/sanson kimala.mp4",
+          poster: "images/nusrat 6.jpeg",
+        },
+        {
+          name: "WAVY KARAN AUJLA SONG",
+          filePath:
+            "videos/WAVY-OFFICIAL-VIDEO-KARAN-AUJLA-LATEST-PUNJABI-SONGS-2024_1080.mp4",
+          poster: "images/wavy.jpeg",
+        },
+        {
+          name: "AT-PEACE KARAN AUJLA SONG",
+          filePath:
+            "videos/At-Peace-Official-Video-Karan-Aujla-Latest-Punjabi-Songs_1080.mp4",
+          poster: "images/at peace.jpeg",
+        },
+        {
+          name: "SAFAR KARAN AUJLA SONG",
+          filePath:
+            "videos/SAFAR-Music-Video-KARAN-AUJLA-LATEST-PUNJABI-SONGS_1080.mp4",
+          poster: "images/sifar.jpeg",
+        },
+        {
+          name: "DON'T LOOK KARAN AUJLA SONG",
+          filePath: "videos/Don-t-Look-4K-Video-Karan-Aujla-Rupan-Bal_1080.mp4",
+          poster: "images/dont look.jpeg",
+        },
+        {
+          name: "DON'T WORRY KARAN AUJLA SONG",
+          filePath:
+            "videos/Don-t-Worry-Full-Video-Karan-Aujla-Gurlez-Akhtar-I_1080.mp4",
+          poster: "images/dont worry.jpeg",
+        },
+        {
+          name: "MF-GABRU KARAN AUJLA SONG",
+          filePath:
+            "videos/MF-GABHRU-Official-Video-KARAN-AUJLA-IKKY-Latest_1080.mp4",
+          poster: "images/mf gabru.jpeg",
+        },
+        {
+          name: "HA HAIGE A KARAN AUJLA SONG",
+          filePath:
+            "videos/Haan-Haige-aa-FULL-VIDEO-KARAN-AUJLA-ft-Gurlez-Akhtar_1080.mp4",
+          poster: "images/ha haige a .jpeg",
+        },
+        {
+          name: "ON TOP KARAN AUJLA SONG",
+          filePath:
+            "videos/y2mate--On-Top-Full-Video-Karan-Aujla-Yeah-Proof_1080.mp4",
+          poster: "images/ontop.jpeg",
+        },
+        {
+          name: "WINNING SPEACH KARAN AUJLA SONG",
+          filePath:
+            "videos/Winning-Speech-Music-Video-Karan-Aujla-Mxrci-Latest_1080.mp4",
+          poster: "images/winning speach.jpeg",
+        },
+        {
+          name: "AAYE HAYEE KARAN AUJLA SONG",
+          filePath:
+            "videos/Aaye-Haaye-Official-Video-Karan-Aujla-Nora-Fatehi-Neha_1080.mp4",
+          poster: "images/ayee hayeee.jpeg",
+        },
+        {
+          title: "YE JO HALKA HALKA SUROOR HA NFAK",
+          src: "videos/YE JO HALKA HALKA SUROOR HAI (REMIX) - NUSRAT FATEH ALI KHAN X NOCTUNE.mp4",
+          poster: "images/nusrat 7.jpeg",
+        },
+        {
+          title: "HA KAHAN KA IRADA TUMHARA SANAM NFAK",
+          src: "videos/Hai-Kahan-Ka-Irada-Tumhara-Sanam-Nusrat-Fateh-Ali_720p.mp4",
+          poster: "images/nusrat 8.jpeg",
+        },
+        {
+          title: "SAADGI TO HAMARI ZARA DEKHYE NFAK",
+          src: "videos/SAADGI-TOH-HAMARI-REMIX-NUSRAT-FATEH-ALI-KHAN-X_1080pHFR.mp4",
+          poster: "images/nusrat 9.jpeg",
+        },
+        {
+          title: "PYAR MANGA THA GAM DE GYE HO NFAK",
+          src: "videos/Pyar-manga-tha-gham-de-gaye-hain-NFAK-Remix-BassBoosted_360.mp4",
+          poster: "images/nusrat 10.jpeg",
+        },
+        {
+          title: "DILNASHIN DILNASHIN SONG",
+          src: "videos/Dilnashin Dilnashin Lyrical Video Song  Aashiq Banaya Aapne  K.K HimeshEmraan H,Tanushree,Sonu S - T-Series Bollywood Classics (1080p, h264).mp4",
+          poster: "images/dilnsashin.jpeg",
+        },
+        {
+          title: "KOI JAYE TO LE AYEE SONG",
+          src: "videos/Koi-Jaaye-To-Le-Aaye-Love-Song-Alka-Yagnik-Shankar_720p.mp4",
+          poster: "images/koi jaye to le aye.jpeg",
+        },
+        {
+          title: "TERE ISHQ MA NACHIN GY SONG",
+          src: "videos/Tere-Ishq-Mein-Naachenge-Raja-Hindustani-Aamir-Khan_1080.mp4",
+          poster: "images/tere ishq ma nachin gy.jpeg",
+        },
+        {
+          title: "KISI KI MUSKURAHATON PE HO NISAR SONG",
+          src: "videos/Kisi-Ki-Muskurahaton-Pe-Ho-Nisar-Raj-Kapoor_1080.mp4",
+          poster: "images/kisi ki muskurahaton.jpeg",
+        },
+        {
+          title: "WOH TASSAVUR KA ALAM SONG",
+          src: "videos/Woh-Tassavur-Ka-Aalam-Woh-Pyaar-Pyaar-Pyaar_1080.mp4",
+          poster: "images/woh tasawor.jpeg",
+        },
+        {
+          title: "DIL KI TANHAI KO SONG",
+          src: "videos/Dil-Ki-Tanhai-Ko-Kumar-Sanu-Chaahat_1080.mp4",
+          poster: "images/dil ki tanhai ko.jpeg",
+        },
+        {
+          title: "CHAND SIFARISH JO KARTA HAMARI SONG",
+          src: "videos/Chand-Sifarish-Full-Song-Fanaa-Aamir-Khan_1080.mp4",
+          poster: "images/chand sifarish.jpeg",
+        },
+        {
+          title: "DIL LAGA LIA MAINE TUMSE PYAR KAR KY SONG",
+          src: "videos/Dil-Laga-Liya-Maine-Tumse-Pyaar-Karke-Dil-Hai_1080.mp4",
+          poster: "images/dil laga lia .jpeg",
+        },
+        {
+          title: "RAFTA RAFTA WO MERI SONG",
+          src: "videos/Rafta-Woh-Meri-Afro-Mix-Mehdi-Hassan-Cover_720p.mp4",
+          poster: "images/rafta rafta.jpeg",
+        },
+        {
+          title: "MERE MEHBOOB QAYAMAT HOGI SONG",
+          src: "videos/Mehboob-Qayamat-Hogi-Original-Mr-X-In-Bombay_1080.mp4",
+          poster: "images/mere mehboob .jpeg",
+        },
+        {
+          title: "DAULAT SOHRAT KIA KARNI SONG",
+          src: "videos/Daulat-Shohrat-Kailash-Kher-Slowed-reverb_480.mp4",
+          poster: "images/daulat sohrat.jpg",
+        },
+        {
+          title: "KAHANI SUNO SONG",
+          src: "videos/kahani suno.mp4",
+          poster: "images/kahani sunol.jpeg",
+        },
+        {
+          title: "APSRAA JANI SONG",
+          src: "videos/Apsraa-Jaani-Ft-Asees-Kaur-Arvindr-Khaira_1080.mp4",
+          poster: "images/apsraa.jpeg",
+        },
+        {
+          title: "DOST BANE RAHTE HA NA SONG",
+          src: "videos/Dost-Banke-Rahat-Fateh-Ali-Khan-Ansu-Mere_480.mp4",
+          poster: "images/dost banke .jpeg",
+        },
+        {
+          title: "APA FER MILANGE SONG",
+          src: "videos/Apa-Fer-Milaange-Official-VIDEO-Savi-kahlon-Latest-Punjabi_1080.mp4",
+          poster: "images/apa fer.jpeg",
+        },
+        {
+          title: "MA WO CHAND SONG",
+          src: "videos/MAIN-WOH-CHAAND-Full-Video-Song-TERAA-SURROOR_1080.mp4",
+          poster: "images/ma wo chand.jpeg",
+        },
+        {
+          title: "LAMBIAN SI JUDAIYAAN SONG",
+          src: "videos/Lambiyaan-Si-Judaiyaan-Song-Raabta_1080.mp4",
+          poster: "images/lambian si judiaan.jpeg",
+        },
+        {
+          title: "UDAARIAN SONG",
+          src: "videos/Udaarian-Badi-lambi-hai-kahani-mere-pyaar-di-Satinder_1080.mp4",
+          poster: "images/udarian.jpeg",
+        },
+        {
+          title: "RUTBA SONG",
+          src: "videos/Rutba-Satinder-Sartaaj-Kali-Jotta-Neeru-Bajwa_1080 (Copy).mp4",
+          poster: "images/rutba.jpeg",
+        },
+      ];
+
+      const container = document.getElementById("songs");
+      const searchBar = document.getElementById("searchBar");
+
+      // function to display songs
+      function displaySongs(list) {
+        container.innerHTML = ""; // clear old results
+        list.forEach((song) => {
+          const card = document.createElement("div");
+          card.className = "song-card";
+
+          const video = document.createElement("video");
+          video.src = song.filePath || song.src;
+          video.poster = song.poster || "";
+          video.controls = true;
+
+          const caption = document.createElement("figcaption");
+          caption.textContent = song.name || song.title;
+
+          card.appendChild(video);
+          card.appendChild(caption);
+          container.appendChild(card);
+        });
+      }
+
+      // initial load
+      displaySongs(playlist);
+
+      // search filter
+      searchBar.addEventListener("keyup", () => {
+        const keyword = searchBar.value.toLowerCase();
+        const filtered = playlist.filter((song) =>
+          (song.name || song.title).toLowerCase().includes(keyword)
+        );
+        displaySongs(filtered);
+      });
+    </script>
+    <img src="images/banner.png" width="1800px" length="1800px" alt="image" />
+  </body>
+</html>
