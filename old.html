@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href="sidhu.css" rel="stylesheet" />
+
+    <title>OLD SONGS</title>
+  </head>
+  <body class="centered">
+    <div class="logo">
+      <figure>
+        <header>
+          <img src="images/logo.jpg" width="100px" length="100px" alt="logo" />
+        </header>
+        <h1>OLD INDIAN SONGS</h1>
+        <hr />
+      </figure>
+    </div>
+    <img
+      src="images/old songs top.png"
+      width="1800"
+      length="1800"
+      alt="image"
+    />
+    <hr />
+    <div class="search-container">
+      <input
+        type="text"
+        width="50pxs"
+        id="searchInput"
+        placeholder="Search songs..."
+        onkeyup="searchSongs()"
+      />
+      <button type="submit">submit</button>
+    </div>
+
+    <table>
+      <tr>
+        <td>
+          <figure>
+            <video
+              src="videos/Dilnashin Dilnashin Lyrical Video Song  Aashiq Banaya Aapne  K.K HimeshEmraan H,Tanushree,Sonu S - T-Series Bollywood Classics (1080p, h264).mp4"
+              controls
+              poster="images/dilnsashin.jpeg"
+            ></video>
+            <figcaption><h2>DILNASHIN DILNASHIN SONG</h2></figcaption>
+          </figure>
+        </td>
+        <td>
+          <figure>
+            <video
+              src="videos/Koi-Jaaye-To-Le-Aaye-Love-Song-Alka-Yagnik-Shankar_720p.mp4"
+              controls
+              poster="images/koi jaye to le aye.jpeg"
+            ></video>
+            <figcaption><h2>KOI JAYE TO LE AYEE SONG</h2></figcaption>
+          </figure>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <figure>
+            <video
+              src="videos/Tere-Ishq-Mein-Naachenge-Raja-Hindustani-Aamir-Khan_1080.mp4"
+              controls
+              poster="images/tere ishq ma nachin gy.jpeg"
+            ></video>
+            <figcaption><h2>TERE ISHQ MA NACHIN GY SONG</h2></figcaption>
+          </figure>
+        </td>
+        <td>
+          <figure>
+            <video
+              src="videos/Kisi-Ki-Muskurahaton-Pe-Ho-Nisar-Raj-Kapoor_1080.mp4"
+              controls
+              poster="images/kisi ki muskurahaton.jpeg"
+            ></video>
+            <figcaption>
+              <h2>KISI KI MUSKURAHATON PE HO NISAR SONG</h2>
+            </figcaption>
+          </figure>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <figure>
+            <video
+              src="videos/Woh-Tassavur-Ka-Aalam-Woh-Pyaar-Pyaar-Pyaar_1080.mp4"
+              controls
+              poster="images/woh tasawor.jpeg"
+            ></video>
+            <figcaption><h2>WOH TASSAVUR KA ALAM SONG</h2></figcaption>
+          </figure>
+        </td>
+        <td>
+          <figure>
+            <video
+              src="videos/Dil-Ki-Tanhai-Ko-Kumar-Sanu-Chaahat_1080.mp4"
+              controls
+              poster="images/dil ki tanhai ko.jpeg"
+            ></video>
+            <figcaption><h2>DIL KI TANHAI KO SONG</h2></figcaption>
+          </figure>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <figure>
+            <video
+              src="videos/Chand-Sifarish-Full-Song-Fanaa-Aamir-Khan_1080.mp4"
+              controls
+              poster="images/chand sifarish.jpeg"
+            ></video>
+            <figcaption>
+              <h2>CHAND SIFARISH JO KARTA HAMARI SONG</h2>
+            </figcaption>
+          </figure>
+        </td>
+        <td>
+          <figure>
+            <video
+              src="videos/Dil-Laga-Liya-Maine-Tumse-Pyaar-Karke-Dil-Hai_1080.mp4"
+              controls
+              poster="images/dil laga lia .jpeg"
+            ></video>
+            <figcaption>
+              <h2>DIL LAGA LIA MAINE TUMSE PYAR KAR KY SONG</h2>
+            </figcaption>
+          </figure>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <figure>
+            <video
+              src="videos/Rafta-Woh-Meri-Afro-Mix-Mehdi-Hassan-Cover_720p.mp4"
+              controls
+              poster="images/rafta rafta.jpeg"
+            ></video>
+            <figcaption><h2>RAFTA RAFTA WO MERI SONG</h2></figcaption>
+          </figure>
+        </td>
+        <td>
+          <figure>
+            <video
+              src="videos/Mehboob-Qayamat-Hogi-Original-Mr-X-In-Bombay_1080.mp4"
+              controls
+              poster="images/mere mehboob .jpeg"
+            ></video>
+            <figcaption><h2>MERE MEHBOOB QAYAMAT HOGI SONG</h2></figcaption>
+          </figure>
+        </td>
+      </tr>
+    </table>
+    <hr />
+    <img src="images/old bottom.png" width="1800" length="1800" alt="image" />
+    <script>
+      function searchSongs() {
+        const input = document
+          .getElementById("searchInput")
+          .value.toLowerCase();
+        const captions = document.querySelectorAll(".song-caption");
+
+        captions.forEach((caption) => {
+          const songText = caption.textContent.toLowerCase();
+          const figure = caption.closest("figure");
+
+          if (songText.includes(input)) {
+            figure.style.display = "song";
+          } else {
+            figure.style.display = "none";
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

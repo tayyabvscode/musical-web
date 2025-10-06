@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="sidhu.css" />
+    <title>SIDHU MOOSE WALA</title>
+  </head>
+  <body class="centered">
+    <div class="logo">
+      <figure>
+        <header>
+          <img src="images/logo.jpg" width="100px" length="100px" alt="logo" />
+        </header>
+        <h1>Sidhu Moose Wala</h1>
+        <hr />
+      </figure>
+    </div>
+    <img src="images/1.jpg" width="1800" length="1800" alt="image" />
+    <table>
+      <ul></ul>
+      <ul></ul>
+      <hr />
+    </table>
+    <div class="search-container">
+      <form>
+        <input
+          type="text"
+          width="50pxs"
+          id="searchInput"
+          placeholder="Search songs..."
+          onkeyup="searchSongs()"
+        />
+        <button type="submit">submit</button>
+      </form>
+    </div>
+
+    <table>
+      <tr>
+        <td>
+          <figure>
+            <video
+              src="videos/lock.mp4"
+              controls
+              poster="images/lock.jpeg"
+            ></video>
+            <figcaption><h2>LOCK SIDHU SONG</h2></figcaption>
+          </figure>
+        </td>
+        <td>
+          <figure>
+            <video
+              src="videos/regret.mp4"
+              controls
+              poster="images/regret.jpeg"
+            ></video>
+            <figcaption><h2>REGRET SIDHU SONG</h2></figcaption>
+          </figure>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <figure>
+            <video
+              src="videos/incinble.mp4"
+              controls
+              poster="images/invincible.jpeg"
+            ></video>
+            <figcaption><h2>INVICLIBLE sidhu song</h2></figcaption>
+          </figure>
+        </td>
+        <td>
+          <figure>
+            <video
+              src="videos/sin.mp4"
+              controls
+              poster="images/sin.jpeg"
+            ></video>
+            <figcaption><h2>SIN SIDHU SONG</h2></figcaption>
+          </figure>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <figure>
+            <video
+              src="videos/badfella.mp4"
+              controls
+              poster="images/badfella.jpeg"
+            ></video>
+            <figcaption><h2>BADFELLA SIDHU SONG</h2></figcaption>
+          </figure>
+        </td>
+        <td>
+          <figure>
+            <video
+              src="videos/Stefflon.mp4"
+              controls
+              poster="images/steflon.jpeg"
+            ></video>
+            <figcaption><h2>STEFLON SIDHU SONG</h2></figcaption>
+          </figure>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <figure>
+            <video
+              src="videos/trend.mp4"
+              controls
+              poster="images/trednd.jpeg"
+            ></video>
+            <figcaption><h2>TREND SIDHU SONG</h2></figcaption>
+          </figure>
+        </td>
+        <td>
+          <figure>
+            <video
+              src="videos/imbetter.mp4"
+              controls
+              poster="images/imbetter.jpeg"
+            ></video>
+            <figcaption><h2>I AM BETTER NOW SIDHU SONG</h2></figcaption>
+          </figure>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <figure>
+            <video
+              src="videos/hathler.mp4"
+              controls
+              poster="images/hathler.jpeg"
+            ></video>
+            <figcaption><h2>HATHLER SIDHU SONG</h2></figcaption>
+          </figure>
+        </td>
+        <td>
+          <figure>
+            <video
+              src="videos/east side flow.mp4"
+              controls
+              poster="images/east side flow.jpeg"
+            ></video>
+            <figcaption><h2>EAST SIDE FLOW SIDHU SONG</h2></figcaption>
+          </figure>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <figure>
+            <video
+              src="videos/dollar.mp4"
+              controls
+              poster="images/dollar.jpeg"
+            ></video>
+            <figcaption><h2>DOLLAR SIDHU SONG</h2></figcaption>
+          </figure>
+        </td>
+        <td>
+          <figure>
+            <video
+              src="videos/brown shortie.mp4"
+              controls
+              poster="images/brown shortie.jpeg"
+            ></video>
+            <figcaption><h2>BROWN SHORTIE SIDHU SONG</h2></figcaption>
+          </figure>
+        </td>
+      </tr>
+    </table>
+    <hr />
+    <img src="3.jpg" width="1800" alt="image" />
+    <script>
+      function searchSongs() {
+        const input = document
+          .getElementById("searchInput")
+          .value.toLowerCase();
+        const captions = document.querySelectorAll(".song-caption");
+
+        captions.forEach((caption) => {
+          const songText = caption.textContent.toLowerCase();
+          const figure = caption.closest("figure");
+
+          if (songText.includes(input)) {
+            figure.style.display = "song";
+          } else {
+            figure.style.display = "none";
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

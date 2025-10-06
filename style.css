@@ -1,0 +1,201 @@
+/* Centering class */
+.centered {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.centered a {
+    align-self: flex-start;
+}
+.centered video
+{
+    align-self: flex-start;
+}
+input
+{
+    align-self: flex-start;
+}
+h1
+{
+    align-self: flex-start;
+}
+h1{
+    align-self: left;
+}
+video
+{
+    font-size: xx-large;
+    align-self: left;
+}
+body
+{
+    background-color: black;
+    margin: 100px;
+}
+
+header
+{
+    font-size: 100px;
+    font-style: serif;
+    color:white
+}
+a
+{
+    text-align: left;
+    margin-left: 50px;
+    margin-top: 30px;
+    touch-action: pinch-zoom;
+}
+p
+{
+    color: blanchedalmond;
+}
+form
+{
+    font-style: bolder;
+    font-size: x-large;
+    color: red;
+}
+form-action
+{
+    text-decoration: solid;
+    color: brown;
+}
+button
+{
+    background-color: transparent;
+    color: white;
+    font-weight: bolder;
+    border: 0cap;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    size: 40px;
+}
+ .video-container {
+      display: flex;
+      gap: 20px; /* space between videos */
+      justify-content: center;
+      flex-wrap: wrap; /* optional: wrap on small screens */
+    }
+
+    figure {
+      margin: 40px;
+      text-align: center;
+    }
+
+    video {
+      width: 700px;
+      height: auto;
+    }
+
+    figcaption {
+      margin-top: 8px;
+      font-size: 16px;
+      color: whitesmoke;
+    }
+    header
+    {
+        margin-top: 0px;
+        align-self: flex-start;
+        position: absolute;
+        top: 5px; /* Adjust for desired top margin */
+        left: 10px; /* Adjust for desired left margin */
+        width: 100px; /* Set logo width */
+        height: auto; /* Maintain aspect ratio */
+}
+figcaption
+{
+    font-size: 20px;
+    font-style: ariel;
+    text-align: center;
+    font-weight: bold;
+}
+h1
+{
+    width: large;
+    text-align: center;
+    text-decoration: dashed;
+    color: honeydew;
+    size: 200px;
+
+}
+h2{
+    color: aliceblue;
+}
+.search-container {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+#searchInput {
+  padding: 8px 12px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 10px solid yellow;
+  width: 50px;
+  align-items:left;
+  margin-bottom: 50px;
+  margin-top: 150px;
+  margin-left: 20px;
+}
+body {
+      font-family: Arial, sans-serif;
+      background:black
+    }
+#searchBar {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      font-size: 18px;
+      background-color: black;
+      color:white;
+      margin-bottom: 50px;
+    }
+#songs {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+    }
+figure {
+      background: black;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+video {
+      width: 100%;
+      border-radius: 10px;
+    }
+h2 {
+      font-size: 18px;
+      margin-top: 10px;
+    }
+.no-results {
+      text-align: center;
+      font-size: 20px;
+      color: red;
+      grid-column: span 3;
+    }
+ #songs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 10px; /* spacing between cards */
+    margin: 10px; /* 50px on all sides */
+  }
+
+  .song-card {
+    text-align: center;
+  }
+
+  .song-card video {
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  .song-card figcaption {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+  }

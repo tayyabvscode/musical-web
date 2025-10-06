@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+        <link href="sidhu.css" rel="stylesheet" >
+   <title>ROMANTIC SONGS</title>
+</head>
+<body class="centered">
+        <div class="logo">
+        <figure>
+            <header>
+            <img src="images/loo.jpg" width="100px" length="100px" alt="logo">
+            </header>
+                <h1>ROMANTIC SONGS</h1> 
+                <hr>   
+
+        </figure>
+    </div>
+    <img src="images/Copilot_20250911_114627.png" width="1800" length="1800" alt="image">
+    <hr>
+    <div class="search-container">
+        <input type="text" width="50pxs" id="searchInput" placeholder="Search songs..." onkeyup="searchSongs()">
+        <button type="submit">submit</button>
+        </div>
+
+    <table>
+        <tr>
+        <TD>
+        <figure>
+                 <video src="videos/Daulat-Shohrat-Kailash-Kher-Slowed-reverb_480.mp4" controls poster="images/daulat sohrat.jpg"></video>
+                 <figcaption><h2>DAULAT SOHRAT KIA KARNI SONG</h2></figcaption>
+        </figure>
+        </TD>
+        <td>
+                <figure>
+                        <video src="videos/Zindagi-Haseen-Pav-Dharia-Official-Video_1080.mp4" controls poster="images/zinadi haseen.jpeg"></video>
+                        <figcaption><h2>ZINDAGI HASEEN  SONG</h2></figcaption>
+                </figure>
+        </td>
+        </tr>
+        <tr>
+                <td>
+                        <figure>
+                                <video src="videos/kahani suno.mp4" controls poster="images/kahani sunol.jpeg"></video>
+                                <figcaption><h2>KAHANI SUNO SONG</h2></figcaption>
+                        </figure>
+                </td>
+                <td>
+                        <figure>
+                                <video src="videos/Apsraa-Jaani-Ft-Asees-Kaur-Arvindr-Khaira_1080.mp4" controls poster="images/apsraa.jpeg"></video>
+                                <figcaption><h2>APSRAA JANI SONG</h2></figcaption>
+                        </figure>
+                </td>
+        </tr>
+        <tr>
+                <td>
+                        <figure>
+                                <video src="videos/Dost-Banke-Rahat-Fateh-Ali-Khan-Ansu-Mere_480.mp4" controls poster="images/dost banke .jpeg"></video>
+                                <figcaption><h2>DOST BANE RAHTE HA NA SONG</h2></figcaption>
+                        </figure>
+                </td>
+                <TD>
+                        <figure>
+                                <video src="videos/Apa-Fer-Milaange-Official-VIDEO-Savi-kahlon-Latest-Punjabi_1080.mp4" controls poster="images/apa fer.jpeg"></video>
+                                <figcaption><h2>APA FER MILANGE SONG</h2></figcaption>
+                        </figure>
+                </TD>
+        </tr>
+        <tr>
+                <td>
+                        <figure>
+                                <video src="videos/MAIN-WOH-CHAAND-Full-Video-Song-TERAA-SURROOR_1080.mp4" controls poster="images/ma wo chand.jpeg"></video>
+                                <figcaption><h2>MA WO CHAND SONG</h2></figcaption>
+                        </figure>
+                </td>
+                <TD>
+                        <figure>
+                                <video src="videos/Lambiyaan-Si-Judaiyaan-Song-Raabta_1080.mp4" controls poster="images/lambian si judiaan.jpeg"></video>
+                                <figcaption><h2>LAMBIAN SI JUDAIYAAN SONG</h2></figcaption>
+                        </figure>
+                </TD>
+        </tr>
+        <tr>
+                <td>
+                        <figure>
+                                <video src="videos/Udaarian-Badi-lambi-hai-kahani-mere-pyaar-di-Satinder_1080.mp4"controls poster="images/udarian.jpeg"></video>
+                                <figcaption><h2>UDAARIAN SONG</h2></figcaption>
+                        </figure>
+                </td>
+                <TD>
+                        <figure>
+                                <video src="videos/Rutba-Satinder-Sartaaj-Kali-Jotta-Neeru-Bajwa_1080 (Copy).mp4" controls poster="images/rutba.jpeg"></video>
+                                <figcaption><h2>RUTBA SONG</h2></figcaption>
+                        </figure>
+                </TD>
+        </tr>
+    </table>
+    <hr>
+    <img src="images/bottom romantic.jpg" width="1800" length="1800" alt="image">
+        <script>   
+         function searchSongs() {
+            const input = document.getElementById("searchInput").value.toLowerCase();
+            const captions = document.querySelectorAll(".song-caption");
+
+            captions.forEach(caption => {
+                const songText = caption.textContent.toLowerCase();
+                const figure = caption.closest("figure");
+
+                if (songText.includes(input)) {
+                    figure.style.display = "song";
+                    } 
+                else {
+                    figure.style.display = "none";
+                }
+            });
+        }
+    </script>
+</body>
+</html>

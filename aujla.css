@@ -1,0 +1,16 @@
+.centered
+{
+    align-items: center;
+}
+body{
+    background-color: black;
+    align-items: center;
+}
+h1{
+    color: white;
+    text-size-adjust: 200px;
+    text-align: center;
+}
+hr{
+    margin: 40px;
+}

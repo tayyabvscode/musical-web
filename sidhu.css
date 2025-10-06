@@ -1,0 +1,57 @@
+.centerd
+{
+    align-items: center;
+}
+body{
+    background-color: black;
+    color:white
+}
+h1{
+    text-align: center;
+}
+img{
+    image-resolution: 1440px;
+    border-image: round;
+    color: azure;
+    margin-bottom: 20px;
+    align-items: center;
+}
+td{
+    margin-left: 40px;
+    margin-top: 40px;
+
+}
+figure{
+    margin: 40px;
+}
+figcaption
+{
+    text-align: center;
+    width: 100;
+}
+video
+{
+    width: 700px;
+    margin: 40px;
+}
+table
+{
+    align-items: center;
+}
+.search-container {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+#searchInput {
+  padding: 8px 12px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 10px solid yellow;
+  width: 50px;
+  align-items:left;
+  margin-bottom: 50px;
+  margin-top: 150px;
+  margin-left: 20px;
+}

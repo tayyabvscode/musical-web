@@ -1,0 +1,14 @@
+h1{
+    text-align: center;
+    color: white;
+    size: 300px;    
+}
+body{
+    background-color: black;
+    color: white;
+}
+td{
+    align-self: flex-start;
+    text-align:center;
+    size: 300px;
+}

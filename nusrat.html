@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <link href="sidhu.css" rel="stylesheet" >
+
+    <title>NUSRAT QAWALI</title>
+</head>
+<body class="centered">
+        <div class="logo">
+        <figure>
+            <header>
+            <img src="images/logo.jpg" width="100px" length="100px" alt="logo">
+            </header>
+                <h1>NUSRAT FATEH ALI KHAN</h1> 
+                <hr>   
+        </figure>
+    </div>
+    <img src="images/nusrat topb.jpeg" width="1800" length="1800" alt="image"> 
+    <hr>
+
+    <table>
+        <tr>
+            <td>
+                <figure>
+                    <video src="videos/Wo-bhi-apny-na-howy-dil-bhi-gya-hathon-se_360.mp4" controls poster="images/nusrat 1.jpeg"></video>
+                    <figcaption><h2>WO BHI APNY NA HOWY NFAK</h2></figcaption>
+                </figure>
+            </td>
+            <TD>
+                <figure>
+                    <video src="videos/Bina-Maahi-Nusrat-Fateh-Ali-Khan-Ft-A1-MelodyMaster_360.mp4" controls poster="images/nusrat 2"></video>
+                    <figcaption><h2>BINA MAHI NFAK</h2></figcaption>
+                </figure>
+            </TD>
+        </tr>
+        <tr>
+            <td>
+                <figure>
+                    <video src="videos/kiwen muhre.mp4" controls poster="images/nusrat 3.jpeg"></video>
+                    <figcaption><h2>KIWEN MUHRE NFAK</h2></figcaption>
+                </figure>
+            </td>
+            <td>
+                <figure>
+                    <video src="videos/mast nazroon.mp4" controls poster="images/nusrat 4.jpeg"></video>
+                    <figcaption><h2>MAST NAZOON SE ALLAH BACHAYE NFAK</h2></figcaption>
+                </figure>
+            </td>
+        </tr>
+        <TR>
+            <td>
+                <figure>
+                    <video src="videos/Dil Pe Zakham Khate Hain - Trap Mix - Nusrat Fateh Ali Khan remix 🖤 - Remixed by Afternight Vibes.mp4" controls poster="images/nusrat 5.jpeg"></video>
+                    <figcaption><h2>DIL PE ZAKHAM KHATE HIAN NFAK</h2></figcaption>
+                </figure>
+            </td>
+            <td>
+                <figure>
+                    <video src="videos/sanson kimala.mp4" controls poster="images/nusrat 6.jpeg"></video>
+                    <figcaption><h2>SANSON KI MALA PY NFAK</h2></figcaption>
+                </figure>
+            </td>
+        </TR>
+        <tr>
+            <td>
+                <figure>
+                    <video src="videos/YE JO HALKA HALKA SUROOR HAI (REMIX) - NUSRAT FATEH ALI KHAN X NOCTUNE.mp4" controls poster="images/nusrat 7.jpeg"></video>
+                    <figcaption><h2>YE JO HALKA HALKA SUROOR HA NFAK</h2></figcaption>
+                </figure>
+            </td>
+            <td>
+                <figure>
+                    <video src="videos/Hai-Kahan-Ka-Irada-Tumhara-Sanam-Nusrat-Fateh-Ali_720p.mp4" controls poster="images/nusrat 8.jpeg"></video>
+                    <figcaption><h2>HA KAHAN KA IRADA TUMHARA SANAM NFAK</h2></figcaption>
+                </figure>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <figure>
+                    <video src="videos/SAADGI-TOH-HAMARI-REMIX-NUSRAT-FATEH-ALI-KHAN-X_1080pHFR.mp4" controls poster="images/nusrat 9.jpeg"></video>
+                    <figcaption><h2>SAADGI TO HAMARI ZARA DEKHYE NFAK</h2></figcaption>
+                </figure>
+            </td>
+            <td>
+                <figure>
+                    <video src="videos/Pyar-manga-tha-gham-de-gaye-hain-NFAK-Remix-BassBoosted_360.mp4" controls poster="images/nusrat 10.jpeg"></video>
+                    <figcaption><h2>PYAR MANGA THA GAM DE GYE HO NFAK </h2></figcaption>
+                </figure>
+            </td>
+        </tr>
+    </table>   
+    <hr>
+    <ul></ul>
+    <img src="nusrat top.jpeg" width="1800" length="1800" alt="image" >
+        <div class="search-container">
+        <input type="text" width="50pxs" id="searchInput" placeholder="Search songs..." onkeyup="searchSongs()">
+        <button type="submit">submit</button>
+        </div>
+     <script>   
+        function searchSongs() {
+            const input = document.getElementById("searchInput").value.toLowerCase();
+            const captions = document.querySelectorAll(".song-caption");
+
+            captions.forEach(caption => {
+                const songText = caption.textContent.toLowerCase();
+                const figure = caption.closest("figure");
+
+                if (songText.includes(input)) {
+                    figure.style.display = "song";
+                    } 
+                else {
+                    figure.style.display = "none";
+                }
+            });
+        }
+    </script>
+</body>
+</html>
